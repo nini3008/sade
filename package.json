@@ -22,15 +22,13 @@
     "@radix-ui/react-visually-hidden": "^1.0.3",
     "@sanity/client": "^6.15.7",
     "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^5.30.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.4",
+    "groq": "^3.50.0",
     "next": "^14.2.3",
-    "next-sanity": "^13.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.51.4",
-    "sanity": "^5.30.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
