@@ -70,14 +70,14 @@ const fallbackPublications: Publication[] = [
     title: 'Trait Anxiety and Attentional Control in Collegiate Athletes',
     journal: 'Psychology of Sport & Exercise',
     year: 2023,
-    description: 'Examining alterations in brain networks associated with anxiety.',
+    abstract: 'Examining alterations in brain networks associated with anxiety.',
   },
   {
     _id: '2',
     title: 'Reward Sensitivity and Injury Rehabilitation Outcomes',
     journal: 'Neurobiology Reports',
     year: 2022,
-    description: 'Understanding long-term cognitive and emotional effects of injury.',
+    abstract: 'Understanding long-term cognitive and emotional effects of injury.',
   },
 ]
 

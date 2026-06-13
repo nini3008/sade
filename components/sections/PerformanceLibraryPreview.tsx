@@ -13,11 +13,11 @@ interface PerformanceLibraryPreviewProps {
   items?: LibraryItem[]
 }
 
-const defaultBooks = [
-  { _id: '1', title: 'Focus', author: 'Daniel Goleman', color: '#1a1a2e' },
-  { _id: '2', title: 'Atomic Habits', author: 'James Clear', color: '#f5f0e8' },
-  { _id: '3', title: 'Train Your Mind', author: 'Manteús Aandel Jr.', color: '#e8dcd0' },
-  { _id: '4', title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman', color: '#2C1810' },
+const defaultBooks: LibraryItem[] = [
+  { _id: '1', title: 'Focus', author: 'Daniel Goleman' },
+  { _id: '2', title: 'Atomic Habits', author: 'James Clear' },
+  { _id: '3', title: 'Train Your Mind', author: 'Manteús Aandel Jr.' },
+  { _id: '4', title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
 ]
 
 export function PerformanceLibraryPreview({
