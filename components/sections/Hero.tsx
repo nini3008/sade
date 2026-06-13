@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { ContourBackground } from '@/components/ui/ContourBackground'
@@ -34,6 +34,12 @@ export function Hero(props: HeroProps) {
     primaryCta = defaultProps.primaryCta,
     secondaryCta = defaultProps.secondaryCta,
   } = props
+
+  // Mobile parallax: the portrait drifts down slowly as the page scrolls up over it.
+  // Tracking the window scroll in pixels is more reliable than a target-based progress.
+  const { scrollY } = useScroll()
+  const mobileImageY = useTransform(scrollY, [0, 700], [0, 220])
+  const mobileImageOpacity = useTransform(scrollY, [0, 450, 700], [1, 1, 0.4])
 
   const renderTitle = () => {
     const text = title || defaultProps.title || ''
@@ -74,28 +80,75 @@ export function Hero(props: HeroProps) {
 
       {/*
         Layout:
-        - Mobile/tablet: vertical stack — text block above, portrait below (no overlap).
-        - Desktop (lg): text left in the container, portrait absolute bottom-right.
+        - Mobile/tablet: portrait pinned to the top as a parallax layer; the content sits
+          below the fold and scrolls up over the image. A gradient scrim blends the two.
+        - Desktop (lg): text left in the container, portrait absolute bottom-right (static).
       */}
-      <div className="relative z-10 flex flex-col lg:block">
-        {/* ─── Content ─── */}
+
+      {/* ─── MOBILE portrait: top-anchored parallax cutout ─── */}
+      <motion.div
+        style={{ y: mobileImageY, opacity: mobileImageOpacity }}
+        className="lg:hidden absolute z-[3] top-0 inset-x-0 h-[64vh]"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 1.04 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
+          className="relative h-full w-full"
+        >
+          <Image
+            src={imageSrc || defaultProps.imageSrc || ''}
+            alt="Dr. Sade Iriah"
+            fill
+            className="object-contain object-top"
+            priority
+            sizes="100vw"
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* ─── DESKTOP portrait: static, anchored bottom-right ─── */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1], delay: 0.25 }}
+        className="hidden lg:block absolute z-[3] bottom-0 right-[5%] h-[94vh] w-[45%]"
+      >
+        <Image
+          src={imageSrc || defaultProps.imageSrc || ''}
+          alt="Dr. Sade Iriah"
+          fill
+          className="object-contain object-bottom"
+          priority
+          sizes="48vw"
+        />
+      </motion.div>
+
+      {/* Mobile-only scrim: dark base under the content that blends up into the portrait */}
+      <div
+        className="lg:hidden absolute inset-x-0 bottom-0 h-[60vh] z-[4] pointer-events-none bg-gradient-to-t from-espresso via-espresso/95 to-transparent"
+        aria-hidden="true"
+      />
+
+      {/* ─── Content ─── */}
+      <div className="relative z-10">
         <Container size="wide">
-          <div className="flex items-center lg:min-h-screen">
+          <div className="flex items-end lg:items-center min-h-screen pt-[52vh] pb-16 lg:pt-0 lg:pb-0">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-              className="w-full max-w-xl pt-32 pb-10 lg:py-0 lg:pr-12"
+              className="w-full max-w-xl lg:pr-12"
             >
-              <p className="text-gold text-xs tracking-[0.28em] uppercase mb-8">
+              <p className="text-gold text-[0.7rem] sm:text-xs tracking-[0.28em] uppercase mb-6 lg:mb-8">
                 {eyebrow}
               </p>
 
-              <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem] text-cream leading-[1.05] mb-8">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl xl:text-[5.25rem] text-cream leading-[1.08] lg:leading-[1.05] mb-6 lg:mb-8">
                 {renderTitle()}
               </h1>
 
-              <p className="text-cream/75 text-lg lg:text-xl leading-relaxed mb-10 lg:mb-12 max-w-md">
+              <p className="text-cream/75 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-12 max-w-md">
                 {subtitle}
               </p>
 
@@ -119,23 +172,6 @@ export function Hero(props: HeroProps) {
             </motion.div>
           </div>
         </Container>
-
-        {/* ─── Portrait: transparent cutout anchored to the bottom edge ─── */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1], delay: 0.25 }}
-          className="relative z-[5] h-[52vh] w-full lg:absolute lg:bottom-0 lg:right-[5%] lg:top-auto lg:h-[94vh] lg:w-[45%]"
-        >
-          <Image
-            src={imageSrc || defaultProps.imageSrc || ''}
-            alt="Dr. Sade Iriah"
-            fill
-            className="object-contain object-bottom"
-            priority
-            sizes="(max-width: 1024px) 100vw, 48vw"
-          />
-        </motion.div>
       </div>
     </section>
   )

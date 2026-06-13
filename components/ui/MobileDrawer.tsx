@@ -82,7 +82,7 @@ export function MobileDrawerTrigger({
       onClick={onClick}
       className={cn(
         'w-10 h-10 flex items-center justify-center',
-        'text-current hover:text-gold',
+        'hover:text-gold',
         'transition-colors duration-300',
         'focus-ring',
         className
