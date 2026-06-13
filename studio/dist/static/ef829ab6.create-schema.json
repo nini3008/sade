@@ -1,0 +1,1130 @@
+[
+  {
+    "fields": [
+      {
+        "initialValue": "Dr. Sade Iriah",
+        "name": "siteTitle",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "logo",
+        "type": "image"
+      },
+      {
+        "name": "primaryEmail",
+        "type": "string"
+      },
+      {
+        "fields": [
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "linkedin",
+            "type": "url",
+            "title": "LinkedIn URL"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "twitter",
+            "type": "url",
+            "title": "Twitter/X URL"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "instagram",
+            "type": "url",
+            "title": "Instagram URL"
+          }
+        ],
+        "name": "socialLinks",
+        "type": "object"
+      },
+      {
+        "fields": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": "SEO Title"
+          },
+          {
+            "rows": 3,
+            "name": "description",
+            "type": "text",
+            "title": "SEO Description"
+          },
+          {
+            "name": "ogImage",
+            "type": "image",
+            "title": "Open Graph Image"
+          }
+        ],
+        "name": "seo",
+        "type": "object",
+        "title": "Default SEO"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "Neuroscientist. Former Division I Athlete.",
+        "name": "heroEyebrow",
+        "type": "string"
+      },
+      {
+        "initialValue": "Training the Mind Behind Elite Performance.",
+        "name": "heroTitle",
+        "type": "string"
+      },
+      {
+        "initialValue": "Translating brain science into performance, resilience, and recovery.",
+        "name": "heroSubtitle",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "heroBody",
+        "type": "text",
+        "title": "Hero Body Copy"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "heroImage",
+        "type": "image"
+      },
+      {
+        "fields": [
+          {
+            "initialValue": "Work With Me",
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "initialValue": "/contact",
+            "name": "link",
+            "type": "string"
+          }
+        ],
+        "name": "heroPrimaryCta",
+        "type": "object",
+        "title": "Primary CTA"
+      },
+      {
+        "fields": [
+          {
+            "initialValue": "Explore the Performance Library",
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "initialValue": "/performance-library",
+            "name": "link",
+            "type": "string"
+          }
+        ],
+        "name": "heroSecondaryCta",
+        "type": "object",
+        "title": "Secondary CTA"
+      },
+      {
+        "initialValue": "Performance Demands More. I Work With Those Who Lead.",
+        "name": "whoIWorkWithTitle",
+        "type": "string",
+        "title": "Section Title"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 2,
+                "name": "description",
+                "type": "text"
+              },
+              {
+                "description": "trophy, team, or brain",
+                "name": "iconName",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "whoIWorkWithCards",
+        "type": "array",
+        "title": "Cards"
+      },
+      {
+        "initialValue": "Where Science Meets Performance",
+        "name": "aboutPreviewTitle",
+        "type": "string",
+        "title": "Title"
+      },
+      {
+        "rows": 4,
+        "name": "aboutPreviewBody",
+        "type": "text",
+        "title": "Body"
+      },
+      {
+        "initialValue": "Learn More",
+        "name": "aboutPreviewCta",
+        "type": "string",
+        "title": "CTA Label"
+      },
+      {
+        "initialValue": "Knowledge That Builds Better Performance.",
+        "name": "libraryPreviewTitle",
+        "type": "string",
+        "title": "Title"
+      },
+      {
+        "rows": 3,
+        "name": "libraryPreviewBody",
+        "type": "text",
+        "title": "Body"
+      },
+      {
+        "initialValue": "Explore the Library",
+        "name": "libraryPreviewCta",
+        "type": "string",
+        "title": "CTA Label"
+      },
+      {
+        "initialValue": "Consulting & Speaking",
+        "name": "servicesTitle",
+        "type": "string",
+        "title": "Title"
+      },
+      {
+        "initialValue": "Evidence-based strategies. Elite-level impact.",
+        "name": "servicesSubtitle",
+        "type": "string",
+        "title": "Subtitle"
+      },
+      {
+        "initialValue": "Get in Touch",
+        "name": "servicesCta",
+        "type": "string",
+        "title": "CTA Label"
+      },
+      {
+        "initialValue": "Ready to Elevate Performance?",
+        "name": "finalCtaTitle",
+        "type": "string",
+        "title": "Title"
+      },
+      {
+        "initialValue": "Let's build what's next.",
+        "name": "finalCtaBody",
+        "type": "string",
+        "title": "Body"
+      },
+      {
+        "initialValue": "Get in Touch",
+        "name": "finalCtaButton",
+        "type": "string",
+        "title": "Button Label"
+      }
+    ],
+    "name": "homePage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "Where Science Meets Performance",
+        "name": "pageTitle",
+        "type": "string"
+      },
+      {
+        "initialValue": "A neuroscience-based approach to performance, resilience, and recovery.",
+        "name": "pageSubtitle",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "heroImage",
+        "type": "image"
+      },
+      {
+        "rows": 4,
+        "name": "introText",
+        "type": "text",
+        "title": "Introduction"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string",
+                "title": "Section Title"
+              },
+              {
+                "rows": 6,
+                "name": "content",
+                "type": "text"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "bioSections",
+        "type": "array",
+        "title": "Biography Sections"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string",
+                "title": "Credential"
+              },
+              {
+                "name": "institution",
+                "type": "string"
+              },
+              {
+                "name": "year",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "credentials",
+        "type": "array"
+      },
+      {
+        "initialValue": "My Approach",
+        "name": "philosophyTitle",
+        "type": "string",
+        "title": "Philosophy Section Title"
+      },
+      {
+        "rows": 4,
+        "name": "philosophyStatement",
+        "type": "text"
+      },
+      {
+        "initialValue": "Ready to Work Together?",
+        "name": "ctaTitle",
+        "type": "string",
+        "title": "CTA Title"
+      },
+      {
+        "name": "ctaBody",
+        "type": "string",
+        "title": "CTA Body"
+      },
+      {
+        "initialValue": "Get in Touch",
+        "name": "ctaButton",
+        "type": "string",
+        "title": "CTA Button Label"
+      }
+    ],
+    "name": "aboutPage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "Let's Build What's Next",
+        "name": "pageTitle",
+        "type": "string"
+      },
+      {
+        "initialValue": "For consulting, speaking, workshops, team performance, or collaboration inquiries.",
+        "name": "pageSubtitle",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "introCopy",
+        "type": "text",
+        "title": "Introduction Copy"
+      },
+      {
+        "name": "formRecipientEmail",
+        "type": "string"
+      },
+      {
+        "initialValue": [
+          "Athlete Consulting",
+          "Team / Organization Workshop",
+          "Speaking Engagement",
+          "Media / Podcast",
+          "Research Collaboration",
+          "General Inquiry"
+        ],
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "inquiryTypes",
+        "type": "array"
+      },
+      {
+        "fields": [
+          {
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "name": "phone",
+            "type": "string"
+          },
+          {
+            "name": "location",
+            "type": "string"
+          }
+        ],
+        "name": "contactDetails",
+        "type": "object"
+      },
+      {
+        "fields": [
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "linkedin",
+            "type": "url",
+            "title": "LinkedIn"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "twitter",
+            "type": "url",
+            "title": "Twitter/X"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "instagram",
+            "type": "url"
+          }
+        ],
+        "name": "socialLinks",
+        "type": "object"
+      }
+    ],
+    "name": "contactPage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "author",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "coverImage",
+        "type": "image"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text",
+        "title": "Short Description"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Book",
+              "value": "book"
+            },
+            {
+              "title": "Framework",
+              "value": "framework"
+            },
+            {
+              "title": "Resource",
+              "value": "resource"
+            }
+          ]
+        },
+        "initialValue": "book",
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Link to purchase or learn more",
+        "name": "externalLink",
+        "type": "url"
+      },
+      {
+        "description": "Lower numbers appear first",
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "libraryItem",
+    "type": "document",
+    "title": "Library Item (Book/Resource)"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "journal",
+        "type": "string",
+        "title": "Journal/Publisher"
+      },
+      {
+        "name": "year",
+        "type": "number"
+      },
+      {
+        "description": "List of authors (e.g., \"Iriah, S., Smith, J., & Jones, K.\")",
+        "name": "authors",
+        "type": "string"
+      },
+      {
+        "rows": 5,
+        "name": "abstract",
+        "type": "text",
+        "title": "Abstract/Summary"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "externalLink",
+        "type": "url",
+        "title": "PubMed/External Link"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Addiction & Neurobiology",
+              "value": "addiction"
+            },
+            {
+              "title": "Brain Connectivity & Imaging",
+              "value": "imaging"
+            },
+            {
+              "title": "Athlete Health & Performance",
+              "value": "athlete"
+            },
+            {
+              "title": "Mental Health & Resilience",
+              "value": "mental-health"
+            },
+            {
+              "title": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "name": "category",
+        "type": "string",
+        "title": "Research Category"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "publication",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "rows": 3,
+        "description": "A brief summary for previews",
+        "name": "excerpt",
+        "type": "text"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "coverImage",
+        "type": "image"
+      },
+      {
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/"
+                                  ],
+                                  "allowRelative": false,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "name": "href",
+                      "type": "url",
+                      "title": "URL"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Emphasis"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          },
+          {
+            "options": {
+              "hotspot": true
+            },
+            "type": "image"
+          }
+        ],
+        "name": "body",
+        "type": "array"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Performance",
+              "value": "performance"
+            },
+            {
+              "title": "Recovery",
+              "value": "recovery"
+            },
+            {
+              "title": "Resilience",
+              "value": "resilience"
+            },
+            {
+              "title": "Neuroscience",
+              "value": "neuroscience"
+            },
+            {
+              "title": "Mindfulness",
+              "value": "mindfulness"
+            }
+          ]
+        },
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "name": "publishedAt",
+        "type": "datetime"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      },
+      {
+        "fields": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": "SEO Title"
+          },
+          {
+            "rows": 2,
+            "name": "description",
+            "type": "text",
+            "title": "SEO Description"
+          }
+        ],
+        "name": "seo",
+        "type": "object",
+        "title": "SEO"
+      }
+    ],
+    "name": "article",
+    "type": "document",
+    "title": "Article/Insight"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Athletes",
+              "value": "athletes"
+            },
+            {
+              "title": "Teams & Organizations",
+              "value": "teams"
+            },
+            {
+              "title": "High Performers",
+              "value": "high-performers"
+            },
+            {
+              "title": "General",
+              "value": "general"
+            }
+          ]
+        },
+        "name": "audienceType",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "description": "Icon identifier: athlete, brain, team, speaker",
+        "name": "iconName",
+        "type": "string"
+      },
+      {
+        "initialValue": "Learn More",
+        "name": "ctaLabel",
+        "type": "string",
+        "title": "CTA Label"
+      },
+      {
+        "initialValue": "/contact",
+        "name": "ctaLink",
+        "type": "string",
+        "title": "CTA Link"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "service",
+    "type": "document",
+    "title": "Service / Work With Me"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Event Title"
+      },
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Keynote",
+              "value": "keynote"
+            },
+            {
+              "title": "Workshop",
+              "value": "workshop"
+            },
+            {
+              "title": "Panel",
+              "value": "panel"
+            },
+            {
+              "title": "Podcast",
+              "value": "podcast"
+            },
+            {
+              "title": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "name": "eventType",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "link",
+        "type": "url",
+        "title": "Event Link"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      },
+      {
+        "initialValue": false,
+        "description": "Check if this event has already occurred",
+        "name": "isPast",
+        "type": "boolean",
+        "title": "Is Past Event"
+      }
+    ],
+    "name": "event",
+    "type": "document",
+    "title": "Speaking & Event"
+  }
+]

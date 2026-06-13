@@ -1,0 +1,16 @@
+{
+  "name": "sade-iriah-studio",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "@sanity/vision": "latest",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "latest",
+    "styled-components": "^6.4.2"
+  }
+}

@@ -1,0 +1,6 @@
+export { Hero } from './Hero'
+export { WhoIWorkWith } from './WhoIWorkWith'
+export { AboutPreview } from './AboutPreview'
+export { PerformanceLibraryPreview } from './PerformanceLibraryPreview'
+export { WorkWithMe } from './WorkWithMe'
+export { FinalCTA } from './FinalCTA'
